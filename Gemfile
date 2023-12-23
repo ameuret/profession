@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem 'matrix'
 gem 'prawn'
 gem 'rake'
 
