@@ -17,3 +17,7 @@ Use [filewatcher](https://github.com/filewatcher/filewatcher-cli).
 ``` shell
 filewatcher profession.pdf.rb 'ruby profession.pdf.rb'
 ```
+
+## Texture and the necessary evil it creates: hyphenation
+
+[Hyphenation is complex](https://english.stackexchange.com/questions/385/what-are-the-rules-for-splitting-words-at-the-end-of-a-line).

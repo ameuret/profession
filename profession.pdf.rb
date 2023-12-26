@@ -27,7 +27,7 @@ class Book
         text('by Isaac Asimov', align: :center)
         start_new_page
         start_new_page
-        stroke_axis
+        # stroke_axis
         idx = 0
         prevLineBlank = false
         textFile.each_line() do
@@ -44,18 +44,42 @@ class Book
           next if lineBlank && prevLineBlank
           next if IGNORE.any? {|exp| line.match exp  }
           line.gsub!('^', "")
+          line.gsub!('“ ', '“')
+          line.gsub!(' ”', '”')
+          # line.gsub!(/([a-z])\s*[[:cntrl:]]\s*([a-z])/, '\1 \2')
+          line.gsub!(/\.([^\s)”“])/, '. \1')
+          line.gsub!("within\n", "within ")
           line.gsub!('screaming', "screa#{shy}ming")
           line.gsub!('already', "al#{shy}ready")
+          line.gsub!('thinking', "thin#{shy}king")
+          line.gsub!('vacuum', "va#{shy}cuum")
+          line.gsub!('watching', "wat#{shy}ching")
           line.gsub!('Laborer', "La#{shy}bo#{shy}rer")
+          line.gsub!('Metallurgy', "Me#{shy}tal#{shy}lurgy")
           line.gsub!('Computer', "Com#{shy}pu#{shy}ter")
           line.gsub!('Programmer', "Pro#{shy}gram#{shy}mer")
           line.gsub!('programming', "pro#{shy}gram#{shy}ming")
           line.gsub!('understanding', "under#{shy}stand#{shy}ing")
+          line.gsub!('pandemonium', "pan#{shy}demo#{shy}nium")
+          line.gsub!('beginning', "be#{shy}gin#{shy}ning")
+          line.gsub!('Antonelli', "An#{shy}to#{shy}nelli")
+          line.gsub!('negligently', "ne#{shy}gli#{shy}gently")
           line.gsub!('different', "dif#{shy}ferent")
+          line.gsub!('background', "back#{shy}ground")
           line.gsub!('leaving', "leav#{shy}ing")
           line.gsub!('center', "cen#{shy}ter")
+          line.gsub!('nothing', "no#{shy}thing")
           line.gsub!('earnestly', "earn#{shy}estly")
+          line.gsub!('explained', "ex#{shy}plained")
+          line.gsub!('sharpened', "shar#{shy}pened")
+          line.gsub!('drumming', "drum#{shy}ming")
           line.gsub!('completely', "comp#{shy}lete#{shy}ly")
+          line.gsub!('competition', "com#{shy}peti#{shy}tion")
+          line.gsub!('Contestant', "Con#{shy}tes#{shy}tant")
+          line.gsub!('Registered', "Re#{shy}gi#{shy}stered")
+          line.gsub!('thoughtfully', "thought#{shy}ful#{shy}ly")
+          line.gsub!('relationship', "re#{shy}la#{shy}tion#{shy}ship")
+          line.gsub!('reprisal', "re#{shy}pri#{shy}sal")
           line.gsub!('Educative', "Edu#{shy}cati#{shy}ve")
           line.gsub!('individual', "indi#{shy}vi#{shy}dual")
           line.gsub!('Distinguished', "Dis#{shy}tin#{shy}guished")
@@ -63,6 +87,7 @@ class Book
           line.gsub!('Rationalization', "Ratio#{shy}nali#{shy}ation")
           line.gsub!('accomplishment', "ac#{shy}com#{shy}pli#{shy}shment")
           line.gsub!('Microspectrograph', "Micro#{shy}spec#{shy}tro#{shy}graph")
+          line.gsub!('Spectrograph', "Spec#{shy}tro#{shy}graph")
           line.gsub!('communication', "com#{shy}muni#{shy}ca#{shy}tion")
           line.gsub!('gleaming', "glea#{shy}ming")
           line.gsub!('structure', "struc#{shy}ture")
