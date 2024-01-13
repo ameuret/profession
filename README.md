@@ -3,7 +3,9 @@
 
 A few prerequisites are handled by Rake tasks:
 
- - font: [ET Bembo](https://en.wikipedia.org/wiki/Bembo) 
+ - fonts:
+  - [ET Bembo](https://en.wikipedia.org/wiki/Bembo) 
+  - [Droid Sans Japanese](https://en.wikipedia.org/wiki/Droid_(typeface))
  - body text from https://www.inf.ufpr.br/renato/profession.html
 
 ``` shell

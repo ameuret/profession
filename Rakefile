@@ -5,7 +5,8 @@ SOURCE = DEST + '.rb'
 BODY = 'fullText.txt'
 BODY_SRC = 'profession.html'
 BODY_URL = 'https://www.inf.ufpr.br/renato/profession.html'
-FONTS = {'et-book-roman-line-figures.ttf' => 'https://github.com/edwardtufte/et-book/raw/gh-pages/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf'}
+FONTS = {'et-book-roman-line-figures.ttf' => 'https://github.com/edwardtufte/et-book/raw/gh-pages/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf',
+         'DroidSansJapanese.ttf' => 'https://github.com/jenskutilek/free-fonts/raw/master/Droid/Droid%20Sans%20Japanese/DroidSansJapanese.ttf'}
 
 task default: DEST
 
