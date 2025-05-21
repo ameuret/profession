@@ -6,7 +6,7 @@ require 'prawn/measurement_extensions'
 class Book
   include Prawn::View
 
-  IGNORE = [/PROFESSION/i, /Asimov/].freeze
+  IGNORE = [/Profession/, /Asimov/].freeze
 
   def document
     @document ||= Prawn::Document.new page_size: 'A5'
